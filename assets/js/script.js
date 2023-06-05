@@ -11,7 +11,6 @@ function clearAll() {
 }
 
 function showMeme() {
-  // Value should be a string representing image URL
   const randomMemeUrl = getRandomData("memes");
 
   const memeContainer = document.querySelector(".meme-content");
@@ -20,12 +19,10 @@ function showMeme() {
 
   clearAll();
 
-  // Add the new img to the document
   memeContainer.appendChild(newMeme);
 }
 
 function showJoke() {
-  // Value should be a string representing the joke
   const randomJokeText = getRandomData("jokes");
 
   const jokeContainer = document.querySelector(".joke-content");
@@ -34,12 +31,10 @@ function showJoke() {
 
   clearAll();
 
-  // Add the new img to the document
   jokeContainer.appendChild(newJoke);
 }
 
 function showQuote() {
-  // Value should be in format: { quote: '', author: '' }
   const randomQuote = getRandomData("quotes");
 
   const quoteContainer = document.querySelector(".quote-content");
@@ -56,7 +51,6 @@ function showQuote() {
 }
 
 function showRiddle() {
-  // Value should be in format: { question: '', answer: '' }
   const randomRiddle = getRandomData("riddles");
 
   const riddleContainer = document.querySelector(".riddle-content");
@@ -90,40 +84,10 @@ function revealAnswers() {
   }
 }
 
-/**
- * This function is used to get random data
- * Valid arguments:
- *
- * 'memes', 'jokes', 'quotes', 'riddles'
- *
- * Return values:
- *
- * For meme data:
- * A string representing an image url
- *
- * For joke data:
- * A string representing the joke
- *
- * For quote data:
- * An object - { quote: '', author: '' }
- *
- * For riddle data:
- * An object - { question: '', answer: '' }
- *
- * Example usage: getRandomData('quotes');
- */
 function getRandomData(type) {
   return data[type][rn(data[type].length)];
 }
 
-// ----------------------------------------------------
-// IGNORE EVERYTHING BELOW - Used for random data
-// ----------------------------------------------------
-
-// Everything below is pre-generated so that you don't have to go find your own memes, jokes, quotes, and math problems.
-// -----------------------------------------------
-
-// Source: https://www.thecoderpedia.com/blog/programming-memes/, Reddit
 const memes = [
   "https://i.redd.it/a0v87gwzoge61.jpg",
   "https://i.redd.it/q29egav34ee61.jpg",
